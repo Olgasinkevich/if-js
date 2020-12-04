@@ -11,7 +11,7 @@
     "husky": "^4.3.0"
   },
   "scripts": {
-    "lint": "eslint main.js"
+      "lint": "eslint main.js"
   },
   "repository": {
     "type": "git",
@@ -24,9 +24,8 @@
     "url": "https://github.com/Olgasinkevich/if-js/issues"
   },
   "homepage": "https://github.com/Olgasinkevich/if-js#readme",
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run lint"
-    }
+
+
   }
-}
+
+
