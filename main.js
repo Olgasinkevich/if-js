@@ -1,4 +1,4 @@
-//lesson-1 lesson-2
+// lesson-1 lesson-2
 /*
 let user = 'John Doe';
 console.log(user);
@@ -42,33 +42,29 @@ for (let i = 0; i < arr2.length; i++) {
 }
 */
 
-//lesson-3
+// lesson-3
 const string = 'word';
 const arr = string.split('');
 const reverse = arr.reverse();
-const stringRev = reverse.join("");
-const check = (str, strRev) => {
-   return str === strRev;
-};
+const stringRev = reverse.join('');
+const check = (str, strRev) => str === strRev;
 
 console.log(check(string, stringRev));
 
-function min (a,b) {
-    if (a > b) {
-        return b;
-    }
-    else {
-        return a;
-    }
-}
-console.log(min(1,2));
+function min(a, b) {
+  if (a > b) {
+    return b;
+  }
 
-function max (a,b) {
-   if (a>b) {
-      return a;
-   }
-   else {
-      return b;
-   }
+  return a;
 }
-console.log(max(3,4));
+console.log(min(1, 2));
+
+function max(a, b) {
+  if (a > b) {
+    return a;
+  }
+
+  return b;
+}
+console.log(max(3, 4));
