@@ -1,3 +1,5 @@
+//lesson-1 lesson-2
+/*
 let user = 'John Doe';
 console.log(user);
 const student = 'Olga';
@@ -38,3 +40,35 @@ for (let i = 0; i < arr2.length; i++) {
     console.log(arr2[i]);
   }
 }
+*/
+
+//lesson-3
+const string = 'word';
+const arr = string.split('');
+const reverse = arr.reverse();
+const stringRev = reverse.join("");
+const check = (str, strRev) => {
+   return str === strRev;
+};
+
+console.log(check(string, stringRev));
+
+function min (a,b) {
+    if (a > b) {
+        return b;
+    }
+    else {
+        return a;
+    }
+}
+console.log(min(1,2));
+
+function max (a,b) {
+   if (a>b) {
+      return a;
+   }
+   else {
+      return b;
+   }
+}
+console.log(max(3,4));
