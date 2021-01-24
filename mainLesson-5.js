@@ -54,13 +54,10 @@ const data = [
 ];
 
 const string = prompt('Введите текст для поиска');
-
 const search = (str, arr) => {
   const strLow = str.toLowerCase();
   const arrTrue = arr.filter((item) => (
-    item.country.toLowerCase().includes(strLow)
-      || item.city.toLowerCase().includes(strLow)
-      || item.hotel.toLowerCase().includes(strLow)));
+    Object.values(item).some((e) => e.toLowerCase().includes(strLow))));
   arrTrue.forEach((item) => {
     document.write(
       `Country: ${item.country} City: ${item.city} Hotel: ${item.hotel}`, '<br/>',
