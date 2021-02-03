@@ -17,8 +17,15 @@ const render = (array) => array.forEach((item) => {
 `;
   hotelsEl.appendChild(el);
 });
-
-fetch('https://fe-student-api.herokuapp.com/api/hotels/popular')
-  .then((response) => response.json())
-  .then((data) => render(data))
-  .catch((error) => alert(error.message));
+const hotels = sessionStorage.getItem('hotels');
+if (hotels) {
+  render(JSON.parse(hotels));
+} else {
+  fetch('https://fe-student-api.herokuapp.com/api/hotels/popular')
+      .then((response) => response.json())
+      .then((data) => {
+        sessionStorage.setItem('hotels', JSON.stringify(data));
+        render(data);
+      })
+      .catch((error) => alert(error.message));
+}
