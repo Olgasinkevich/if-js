@@ -54,9 +54,9 @@ const data = [
 ];
 
 const string = prompt('Введите текст для поиска');
-const search = (str, arr) => {
-  const strLow = str.toLowerCase();
-  const arrTrue = arr.filter((item) => (
+const search = (string, array) => {
+  const strLow = string.toLowerCase();
+  const arrTrue = array.filter((item) => (
     Object.values(item).some((e) => e.toLowerCase().includes(strLow))));
   arrTrue.forEach((item) => {
     document.write(
