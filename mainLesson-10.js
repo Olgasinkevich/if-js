@@ -48,11 +48,11 @@ const data = [
     imageUrl: 'https://res.cloudinary.com/intellectfox/image/upload/v1610379365/fe/the-andaman-resort_d2xksj.jpg',
   },
 ];
-const hotelsEl=document.getElementById('hotels');
+const hotelsEl = document.getElementById('hotels');
 data.forEach(item => {
-   const el = document.createElement('div');
-  el.classList.add('hotel','col-3', 'col-3_one', 'col-xs-3');
-     el.innerHTML = `
+  const el = document.createElement('div');
+  el.classList.add('hotel', 'col-3', 'col-3_one', 'col-xs-3');
+  el.innerHTML = `
     <div class="col-3 col-3_one col-xs-3">
   <div class="image image_first">
     <img class=image__size_156 src="${item.imageUrl}" alt="${item.name}">
