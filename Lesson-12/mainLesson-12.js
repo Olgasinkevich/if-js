@@ -1,25 +1,32 @@
-const hotelsEl = document.getElementById('hotels');
-const random = (array) => Math.floor(Math.random() * array.length);
+const IMAGES_PER_SCREEN = 4;
+const PATH = 'https://fe-student-api.herokuapp.com/api/hotels/popular';
 
-const createRandomArray = (array) => {
+const hotelsEl = document.getElementById('hotels');
+const random = (maxIndex) => Math.floor(Math.random() * maxIndex);
+
+const createRandomArray = (maxIndex) => {
   const array1 = [];
   let i = 0;
-  while (i < 4) {
-    array1.push(random(array);
-    i++;
+  while (i < IMAGES_PER_SCREEN) {
+    const index = random(maxIndex);
+    if (!array1.includes(index)) {
+      array1.push(index);
+      i++;
+    }
   }
   return array1;
 };
-arrayResult=array.filter((e, i)=>{
-  array1.includs(i)
-});
 
+const createResultArray = (array) => {
+  const indexArray = createRandomArray(array.length);
+  return array.filter((e, i) => indexArray.includes(i));
+};
 
-
-const render = (array1) => array1.forEach((item) => {
-  const el = document.createElement('div');
-  el.classList.add('hotel', 'col-3', 'col-3_one', 'col-xs-3');
-  el.innerHTML = `
+const render = (array) => createResultArray(array)
+  .forEach((item) => {
+    const el = document.createElement('div');
+    el.classList.add('hotel', 'col-3', 'col-3_one', 'col-xs-3');
+    el.innerHTML = `
     <div class="col-3 col-3_one col-xs-3">
   <div class="image image_first">
     <img class=image__size_156 src="${item.imageUrl}" alt="${item.name}">
@@ -32,19 +39,17 @@ const render = (array1) => array1.forEach((item) => {
   </div>
 </div>
 `;
-  hotelsEl.appendChild(el);
-});
+    hotelsEl.appendChild(el);
+  });
 const hotels = sessionStorage.getItem('hotels');
 if (hotels) {
   render(JSON.parse(hotels));
 } else {
-  fetch('https://fe-student-api.herokuapp.com/api/hotels/popular')
+  fetch(PATH)
     .then((response) => response.json())
     .then((data) => {
       sessionStorage.setItem('hotels', JSON.stringify(data));
-     const = createRandomArray(data);
-      render(array1);
+      render(data);
     })
     .catch((error) => alert(error.message));
 }
-
