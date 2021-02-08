@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Free Web tutorials">
+  <meta name="keywords" content="HTML, CSS, JavaScript">
+  <meta name="author" content="Sinkevich">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>footer</title>
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+<svg xmlns="http://www.w3.org/2000/svg" class="sprite">
+  <symbol id="tripHouse" viewBox="0 0 205 40">
+    <path
+      d="M.84 11.024c-.206-.33-.397-.78-.574-1.35A6.033 6.033 0 010 7.874c0-1.17.25-2.01.752-2.52.532-.51 1.21-.765 2.036-.765h19.297c.207.33.398.78.575 1.35.177.57.266 1.17.266 1.8 0 1.17-.266 2.01-.797 2.52-.501.51-1.165.765-1.991.765h-4.913V31.81c-.325.09-.84.18-1.55.27-.678.09-1.356.135-2.035.135s-1.284-.06-1.815-.18c-.501-.09-.929-.27-1.283-.54-.354-.27-.62-.645-.797-1.125-.177-.48-.265-1.11-.265-1.89V11.024H.84zM31.85 31.946c-.295.09-.768.18-1.417.27-.62.09-1.268.135-1.947.135-.65 0-1.24-.045-1.77-.135-.502-.09-.93-.27-1.284-.54a2.792 2.792 0 01-.84-1.08c-.178-.48-.266-1.095-.266-1.845V15.253c0-.69.118-1.275.354-1.755a4.35 4.35 0 011.106-1.35c.472-.39 1.048-.734 1.726-1.034a16.838 16.838 0 014.736-1.395c.856-.15 1.711-.225 2.567-.225 1.416 0 2.538.285 3.364.855.826.54 1.239 1.44 1.239 2.7 0 .42-.06.84-.177 1.26-.118.39-.266.75-.443 1.08a20.679 20.679 0 00-3.806.359c-.62.12-1.21.255-1.77.405a6.74 6.74 0 00-1.372.45v15.343zM42.345 4.05c0-1.14.369-2.1 1.106-2.88.767-.78 1.77-1.17 3.01-1.17 1.24 0 2.228.39 2.965 1.17.767.78 1.151 1.74 1.151 2.88s-.384 2.1-1.15 2.88c-.738.779-1.727 1.169-2.966 1.169-1.24 0-2.242-.39-3.01-1.17-.737-.78-1.106-1.74-1.106-2.88zm7.878 27.896c-.325.06-.812.135-1.46.225-.62.12-1.255.18-1.904.18s-1.239-.045-1.77-.135c-.502-.09-.93-.27-1.284-.54a2.79 2.79 0 01-.84-1.08c-.178-.48-.266-1.095-.266-1.845V10.44c.325-.06.797-.135 1.416-.225.65-.12 1.298-.18 1.948-.18.649 0 1.224.045 1.726.135.53.09.973.27 1.327.54.355.27.62.645.797 1.125.207.45.31 1.05.31 1.8v18.312zM64.882 9.449c1.77 0 3.408.24 4.913.72 1.535.45 2.848 1.155 3.94 2.114 1.091.96 1.947 2.175 2.566 3.645.62 1.44.93 3.165.93 5.174 0 1.92-.266 3.6-.797 5.04s-1.284 2.654-2.257 3.644c-.974.96-2.154 1.68-3.54 2.16-1.358.48-2.878.72-4.56.72-1.268 0-2.448-.195-3.54-.585v7.47c-.295.089-.767.179-1.416.269-.65.12-1.314.18-1.992.18-.65 0-1.24-.045-1.77-.135-.502-.09-.93-.27-1.284-.54s-.62-.645-.797-1.125c-.177-.45-.265-1.05-.265-1.8V14.803c0-.81.162-1.47.487-1.98.354-.51.826-.975 1.416-1.394.915-.6 2.05-1.08 3.408-1.44 1.357-.36 2.877-.54 4.558-.54zm.09 17.188c3.038 0 4.558-1.845 4.558-5.535 0-1.92-.384-3.344-1.151-4.274-.738-.93-1.815-1.395-3.23-1.395-.561 0-1.063.075-1.506.225a5.15 5.15 0 00-1.15.45v9.899c.354.18.737.33 1.15.45.413.12.856.18 1.328.18zM105.466 31.811c-.325.09-.841.18-1.549.27-.679.09-1.357.135-2.036.135a8.28 8.28 0 01-1.815-.18 2.936 2.936 0 01-1.283-.54c-.354-.27-.62-.645-.797-1.125-.177-.48-.265-1.11-.265-1.89v-7.019h-8.498v10.349c-.325.09-.84.18-1.549.27-.679.09-1.357.135-2.036.135-.678 0-1.283-.06-1.815-.18-.501-.09-.929-.27-1.283-.54-.354-.27-.62-.645-.797-1.125-.177-.48-.265-1.11-.265-1.89V4.724c.324-.06.84-.135 1.549-.225.708-.12 1.387-.18 2.036-.18.678 0 1.269.06 1.77.18.531.09.974.27 1.328.54.354.27.62.645.796 1.125.178.48.266 1.11.266 1.89v7.2h8.498V4.723c.324-.06.84-.135 1.549-.225.708-.12 1.387-.18 2.036-.18.678 0 1.268.06 1.77.18.531.09.974.27 1.328.54.354.27.619.645.796 1.125.177.48.266 1.11.266 1.89v23.757zM132.901 21.057c0 1.86-.28 3.525-.841 4.995-.561 1.44-1.357 2.654-2.39 3.644-1.003.99-2.213 1.74-3.629 2.25-1.417.51-2.995.765-4.736.765-1.741 0-3.319-.27-4.736-.81-1.416-.54-2.64-1.305-3.673-2.295-1.003-1.02-1.785-2.25-2.346-3.69-.56-1.44-.841-3.059-.841-4.859 0-1.77.281-3.374.841-4.814.561-1.44 1.343-2.655 2.346-3.645a10.47 10.47 0 013.673-2.34c1.417-.54 2.995-.81 4.736-.81 1.741 0 3.319.286 4.736.856 1.416.54 2.626 1.32 3.629 2.34 1.033.99 1.829 2.204 2.39 3.644.561 1.44.841 3.03.841 4.77zm-15.491 0c0 1.83.34 3.24 1.018 4.23.708.96 1.682 1.44 2.921 1.44 1.24 0 2.184-.495 2.833-1.485.679-.99 1.018-2.385 1.018-4.185 0-1.8-.339-3.18-1.018-4.14-.679-.989-1.638-1.484-2.877-1.484-1.239 0-2.198.495-2.877 1.485-.678.96-1.018 2.34-1.018 4.14zM136.572 10.439c.295-.09.752-.18 1.372-.27.649-.09 1.313-.135 1.991-.135.649 0 1.225.045 1.726.135.531.09.974.27 1.328.54.354.27.62.645.797 1.125.206.45.31 1.05.31 1.8v9.673c0 1.23.295 2.115.885 2.655.59.51 1.445.765 2.567.765.678 0 1.224-.06 1.637-.18.443-.12.782-.24 1.018-.36V10.439c.295-.09.753-.18 1.372-.27.649-.09 1.313-.135 1.992-.135.649 0 1.224.045 1.726.135.531.09.974.27 1.328.54.354.27.619.645.796 1.125.207.45.31 1.05.31 1.8v13.678c0 1.5-.619 2.624-1.859 3.374-1.032.66-2.272 1.155-3.717 1.485-1.417.36-2.966.54-4.648.54-1.593 0-3.068-.18-4.425-.54-1.328-.36-2.479-.915-3.453-1.665-.973-.75-1.726-1.71-2.257-2.88-.531-1.2-.796-2.64-.796-4.319V10.44zM180.478 25.467c0 2.28-.841 4.064-2.523 5.354-1.682 1.29-4.161 1.935-7.436 1.935-1.239 0-2.39-.09-3.452-.27-1.062-.18-1.977-.45-2.744-.81-.737-.39-1.328-.87-1.77-1.44-.413-.57-.62-1.245-.62-2.024 0-.72.148-1.32.443-1.8.295-.51.649-.93 1.062-1.26.856.48 1.829.915 2.921 1.305 1.121.36 2.405.54 3.851.54.914 0 1.608-.135 2.08-.405.501-.27.752-.63.752-1.08 0-.42-.177-.75-.531-.99-.354-.24-.944-.435-1.77-.585l-1.328-.27c-2.567-.51-4.485-1.305-5.754-2.385-1.239-1.11-1.859-2.684-1.859-4.724 0-1.11.236-2.115.709-3.015a6.286 6.286 0 011.991-2.25c.856-.6 1.874-1.064 3.054-1.394 1.21-.33 2.538-.495 3.983-.495 1.092 0 2.11.09 3.054.27.974.15 1.815.39 2.523.72.708.33 1.269.765 1.682 1.304.413.51.619 1.125.619 1.845 0 .69-.132 1.29-.398 1.8-.236.48-.546.885-.929 1.215-.236-.15-.591-.3-1.063-.45-.472-.18-.988-.33-1.549-.45-.56-.15-1.136-.27-1.726-.36a9.82 9.82 0 00-1.549-.135c-.974 0-1.726.12-2.257.36-.531.21-.797.555-.797 1.035 0 .33.148.6.443.81.295.21.856.405 1.682.585l1.372.315c2.832.66 4.839 1.575 6.019 2.744 1.21 1.14 1.815 2.625 1.815 4.455zM195.706 32.71c-1.741 0-3.364-.24-4.869-.719a11.498 11.498 0 01-3.895-2.25c-1.091-.99-1.962-2.234-2.611-3.734-.619-1.5-.929-3.255-.929-5.265 0-1.98.31-3.674.929-5.084.649-1.44 1.49-2.61 2.523-3.51a9.525 9.525 0 013.541-2.024 12.601 12.601 0 014.071-.675c1.564 0 2.981.24 4.249.72 1.299.48 2.405 1.14 3.32 1.98a8.426 8.426 0 012.168 3.014c.531 1.17.797 2.445.797 3.825 0 1.02-.28 1.8-.841 2.34-.561.54-1.342.884-2.346 1.034l-10.932 1.665c.325.99.989 1.74 1.992 2.25 1.003.48 2.154.72 3.452.72 1.21 0 2.346-.15 3.408-.45 1.092-.33 1.977-.705 2.656-1.125.472.3.87.72 1.195 1.26.324.54.487 1.11.487 1.71 0 1.35-.62 2.354-1.859 3.014-.945.51-2.007.855-3.187 1.035-1.18.18-2.287.27-3.319.27zm-1.24-17.682c-.708 0-1.327.12-1.858.36-.502.24-.915.555-1.24.945-.324.36-.575.78-.752 1.26-.148.45-.236.915-.266 1.395l7.569-1.26c-.089-.6-.413-1.2-.974-1.8-.561-.6-1.387-.9-2.479-.9z"
+      />
+  </symbol>
+</svg>
+<svg xmlns="http://www.w3.org/2000/svg" class="sprite">
+  <symbol id="Night" viewBox="0 0 30 30">
+    <path
+      d="M25.61 10.61V4.39h-6.22L15 0l-4.39 4.39H4.39v6.22L0 15l4.39 4.39v6.22h6.22L15 30l4.39-4.39h6.22v-6.22L30 15l-4.39-4.39zM15 22.958a7.924 7.924 0 01-3.316-.73c2.732-1.26 4.642-4.018 4.642-7.228s-1.91-5.968-4.642-7.228A7.924 7.924 0 0115 7.042c4.39 0 7.958 3.568 7.958 7.958 0 4.39-3.568 7.958-7.958 7.958z"
+      fill="#fff"/>
+  </symbol>
+</svg>
+
+<svg xmlns="http://www.w3.org/2000/svg" class="sprite">
+  <symbol id="Account" viewBox="0 0 40 40">
+    <path
+      d="M20 0C8.96 0 0 8.96 0 20s8.96 20 20 20 20-8.96 20-20S31.04 0 20 0zm0 6c3.32 0 6 2.68 6 6s-2.68 6-6 6-6-2.68-6-6 2.68-6 6-6zm0 28.4c-5 0-9.42-2.56-12-6.44.06-3.98 8-6.16 12-6.16 3.98 0 11.94 2.18 12 6.16-2.58 3.88-7 6.44-12 6.44z"
+    />
+  </symbol>
+</svg>
+<svg xmlns="http://www.w3.org/2000/svg" class="sprite">
+  <symbol id="GooglePlayBadge" viewBox="0 0 135 40">
+    <path d="M130 40H5c-2.75 0-5-2.25-5-5V5c0-2.75 2.25-5 5-5h125c2.75 0 5 2.25 5 5v30c0 2.75-2.25 5-5 5z" fill="#000"/>
+    <path
+      d="M130 .8a4.2 4.2 0 014.2 4.2v30a4.2 4.2 0 01-4.2 4.2H5A4.2 4.2 0 01.8 35V5A4.2 4.2 0 015 .8h125zm0-.8H5C2.25 0 0 2.25 0 5v30c0 2.75 2.25 5 5 5h125c2.75 0 5-2.25 5-5V5c0-2.75-2.25-5-5-5z"
+      fill="#A6A6A6"/>
+    <path
+      d="M47.42 10.24c0 .84-.25 1.51-.75 2-.56.59-1.3.89-2.2.89-.87 0-1.6-.3-2.21-.9-.61-.6-.91-1.35-.91-2.23 0-.89.3-1.63.91-2.23.61-.6 1.34-.9 2.21-.9.43 0 .84.08 1.23.25.39.17.7.39.94.67l-.53.53c-.4-.47-.94-.71-1.64-.71-.63 0-1.18.22-1.64.67-.46.44-.69 1.02-.69 1.73s.23 1.29.69 1.73c.46.44 1.01.67 1.64.67.67 0 1.23-.22 1.68-.67.29-.29.46-.7.5-1.22h-2.18V9.8h2.91c.02.15.04.3.04.44zM52.03 7.74H49.3v1.9h2.46v.72H49.3v1.9h2.73V13h-3.5V7h3.5v.74zM55.28 13h-.77V7.74h-1.68V7h4.12v.74h-1.68V13h.01zM59.94 13V7h.77v6h-.77zM64.13 13h-.77V7.74h-1.68V7h4.12v.74h-1.68V13h.01zM73.61 12.22c-.59.61-1.32.91-2.2.91-.88 0-1.61-.3-2.2-.91-.59-.61-.88-1.35-.88-2.22 0-.87.29-1.62.88-2.22.59-.61 1.32-.91 2.2-.91.87 0 1.6.3 2.2.91.59.61.89 1.35.89 2.22-.01.88-.3 1.62-.89 2.22zm-3.83-.5c.44.45.99.67 1.63.67.64 0 1.19-.22 1.63-.67.44-.45.67-1.02.67-1.72s-.22-1.27-.67-1.72c-.44-.45-.99-.67-1.63-.67-.64 0-1.19.22-1.63.67-.44.45-.67 1.02-.67 1.72s.23 1.27.67 1.72zM75.58 13V7h.94l2.92 4.67h.03l-.03-1.16V7h.77v6h-.8l-3.05-4.89h-.03l.03 1.16V13h-.78z"
+      fill="#fff" stroke="#fff" stroke-width=".2" stroke-miterlimit="10"/>
+    <path
+      d="M68.14 21.75c-2.35 0-4.27 1.79-4.27 4.25 0 2.45 1.92 4.25 4.27 4.25 2.35 0 4.27-1.8 4.27-4.25 0-2.46-1.92-4.25-4.27-4.25zm0 6.83c-1.29 0-2.4-1.06-2.4-2.58 0-1.53 1.11-2.58 2.4-2.58 1.29 0 2.4 1.05 2.4 2.58 0 1.52-1.12 2.58-2.4 2.58zm-9.32-6.83c-2.35 0-4.27 1.79-4.27 4.25 0 2.45 1.92 4.25 4.27 4.25 2.35 0 4.27-1.8 4.27-4.25 0-2.46-1.92-4.25-4.27-4.25zm0 6.83c-1.29 0-2.4-1.06-2.4-2.58 0-1.53 1.11-2.58 2.4-2.58 1.29 0 2.4 1.05 2.4 2.58 0 1.52-1.11 2.58-2.4 2.58zm-11.08-5.52v1.8h4.32c-.13 1.01-.47 1.76-.98 2.27-.63.63-1.61 1.32-3.33 1.32-2.66 0-4.74-2.14-4.74-4.8 0-2.66 2.08-4.8 4.74-4.8 1.43 0 2.48.56 3.25 1.29l1.27-1.27c-1.08-1.03-2.51-1.82-4.53-1.82-3.64 0-6.7 2.96-6.7 6.61 0 3.64 3.06 6.61 6.7 6.61 1.97 0 3.45-.64 4.61-1.85 1.19-1.19 1.56-2.87 1.56-4.22 0-.42-.03-.81-.1-1.13h-6.07v-.01zm45.31 1.4c-.35-.95-1.43-2.71-3.64-2.71-2.19 0-4.01 1.72-4.01 4.25 0 2.38 1.8 4.25 4.22 4.25 1.95 0 3.08-1.19 3.54-1.88l-1.45-.97c-.48.71-1.14 1.18-2.09 1.18s-1.63-.44-2.06-1.29l5.69-2.35-.2-.48zm-5.8 1.42c-.05-1.64 1.27-2.48 2.22-2.48.74 0 1.37.37 1.58.9l-3.8 1.58zM82.63 30h1.87V17.5h-1.87V30zm-3.06-7.3h-.07c-.42-.5-1.22-.95-2.24-.95-2.13 0-4.08 1.87-4.08 4.27 0 2.38 1.95 4.24 4.08 4.24 1.01 0 1.82-.45 2.24-.97h.06v.61c0 1.63-.87 2.5-2.27 2.5-1.14 0-1.85-.82-2.14-1.51l-1.63.68c.47 1.13 1.71 2.51 3.77 2.51 2.19 0 4.04-1.29 4.04-4.43v-7.64h-1.77v.69h.01zm-2.15 5.88c-1.29 0-2.37-1.08-2.37-2.56 0-1.5 1.08-2.59 2.37-2.59 1.27 0 2.27 1.1 2.27 2.59.01 1.48-.99 2.56-2.27 2.56zm24.39-11.08h-4.47V30h1.87v-4.74h2.61c2.07 0 4.1-1.5 4.1-3.88s-2.05-3.88-4.11-3.88zm.04 6.02H99.2v-4.29h2.65c1.4 0 2.19 1.16 2.19 2.14 0 .98-.79 2.15-2.19 2.15zm11.54-1.79c-1.35 0-2.75.6-3.33 1.91l1.66.69c.35-.69 1.01-.92 1.7-.92.96 0 1.95.58 1.96 1.61v.13c-.34-.19-1.06-.48-1.95-.48-1.79 0-3.6.98-3.6 2.81 0 1.67 1.46 2.75 3.1 2.75 1.25 0 1.95-.56 2.38-1.22h.06v.97h1.8v-4.79c.01-2.22-1.65-3.46-3.78-3.46zm-.23 6.85c-.61 0-1.46-.31-1.46-1.06 0-.96 1.06-1.33 1.98-1.33.82 0 1.21.18 1.7.42a2.257 2.257 0 01-2.22 1.97zM123.74 22l-2.14 5.42h-.06L119.32 22h-2.01l3.33 7.58-1.9 4.21h1.95L125.82 22h-2.08zm-16.8 8h1.87V17.5h-1.87V30z"
+      fill="#fff"/>
+    <path d="M10.44 7.54c-.29.31-.46.79-.46 1.4v22.12c0 .62.17 1.1.46 1.4l.07.07L22.9 20.15v-.3L10.51 7.47l-.07.07z"
+          fill="url(#google0_linear)"/>
+    <path d="M27.03 24.28l-4.13-4.13v-.3l4.13-4.13.09.05 4.89 2.78c1.4.79 1.4 2.09 0 2.89l-4.89 2.78-.09.06z"
+          fill="url(#google1_linear)"/>
+    <path d="M27.12 24.22L22.9 20 10.44 32.46c.46.49 1.22.55 2.08.06l14.6-8.3z" fill="url(#google2_linear)"/>
+    <path d="M27.12 15.78l-14.61-8.3c-.86-.49-1.62-.43-2.08.06L22.9 20l4.22-4.22z" fill="url(#google3_linear)"/>
+    <path opacity=".2"
+          d="M27.03 24.13l-14.52 8.25c-.81.46-1.54.43-2 .01l-.07.07.07.07c.47.42 1.19.45 2-.01l14.61-8.3-.09-.09z"
+          fill="#000"/>
+    <path opacity=".12"
+          d="M10.44 32.32c-.29-.31-.46-.79-.46-1.4v.15c0 .62.17 1.1.46 1.4l.07-.07-.07-.08zM32.01 21.3l-4.99 2.83.09.09L32 21.44c.7-.4 1.05-.92 1.05-1.44-.05.47-.4.94-1.04 1.3z"
+          fill="#000"/>
+    <path opacity=".25"
+          d="M12.51 7.62l19.5 11.08c.63.36.99.82 1.05 1.3 0-.52-.35-1.05-1.05-1.44L12.51 7.48c-1.4-.79-2.54-.13-2.54 1.47v.15c0-1.61 1.15-2.27 2.54-1.48z"
+          fill="#fff"/>
+    <defs>
+      <linearGradient id="google0_linear" x1="21.8" y1="8.71" x2="5.017" y2="25.492" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#00A0FF"/>
+        <stop offset=".007" stop-color="#00A1FF"/>
+        <stop offset=".26" stop-color="#00BEFF"/>
+        <stop offset=".512" stop-color="#00D2FF"/>
+        <stop offset=".76" stop-color="#00DFFF"/>
+        <stop offset="1" stop-color="#00E3FF"/>
+      </linearGradient>
+      <linearGradient id="google1_linear" x1="33.834" y1="20.001" x2="9.638" y2="20.001" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#FFE000"/>
+        <stop offset=".409" stop-color="#FFBD00"/>
+        <stop offset=".775" stop-color="orange"/>
+        <stop offset="1" stop-color="#FF9C00"/>
+      </linearGradient>
+      <linearGradient id="google2_linear" x1="24.827" y1="22.296" x2="2.069" y2="45.054" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#FF3A44"/>
+        <stop offset="1" stop-color="#C31162"/>
+      </linearGradient>
+      <linearGradient id="google3_linear" x1="7.297" y1=".176" x2="17.46" y2="10.339" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#32A071"/>
+        <stop offset=".069" stop-color="#2DA771"/>
+        <stop offset=".476" stop-color="#15CF74"/>
+        <stop offset=".801" stop-color="#06E775"/>
+        <stop offset="1" stop-color="#00F076"/>
+      </linearGradient>
+    </defs>
+  </symbol>
+</svg>
+
+<svg xmlns="http://www.w3.org/2000/svg" class="sprite">
+  <symbol id="AppleBadge" viewBox="0 0 120 40">
+    <path
+      d="M110.135 0H9.535c-.367 0-.73 0-1.095.002-.306.002-.61.008-.919.013C6.85.023 6.18.082 5.517.192a6.665 6.665 0 00-1.9.627A6.438 6.438 0 00.193 5.522a12.993 12.993 0 00-.179 2.002c-.01.306-.01.614-.015.92V31.56c.005.31.006.61.015.921.008.671.068 1.34.18 2.002.11.663.32 1.306.624 1.905.303.598.701 1.143 1.179 1.614.473.477 1.019.875 1.618 1.179a6.7 6.7 0 001.901.63c.663.11 1.333.168 2.004.177.31.007.613.011.919.011.366.002.728.002 1.095.002h100.6c.359 0 .724 0 1.084-.002.304 0 .617-.004.922-.01.67-.01 1.338-.068 2-.178a6.805 6.805 0 001.908-.63A6.293 6.293 0 00117.666 38a6.405 6.405 0 001.182-1.614c.302-.6.51-1.242.619-1.905.111-.661.173-1.33.185-2.002.004-.31.004-.61.004-.921.008-.364.008-.725.008-1.094V9.536c0-.366 0-.73-.008-1.092 0-.306 0-.614-.004-.92a13.57 13.57 0 00-.185-2.002 6.648 6.648 0 00-.619-1.904 6.469 6.469 0 00-2.799-2.8 6.77 6.77 0 00-1.908-.627c-.661-.11-1.33-.169-2-.176-.305-.005-.618-.011-.922-.013-.36-.002-.725-.002-1.084-.002z"
+      fill="#A6A6A6"/>
+    <path
+      d="M8.445 39.125c-.305 0-.602-.004-.904-.01a12.669 12.669 0 01-1.87-.164 5.88 5.88 0 01-1.656-.548 5.403 5.403 0 01-1.397-1.016 5.32 5.32 0 01-1.02-1.397 5.722 5.722 0 01-.544-1.657 12.41 12.41 0 01-.166-1.875c-.007-.21-.015-.913-.015-.913v-23.1s.009-.692.015-.895a12.37 12.37 0 01.165-1.872 5.755 5.755 0 01.544-1.662c.26-.518.603-.99 1.015-1.398A5.565 5.565 0 015.667 1.05C6.287.95 6.915.895 7.543.887l.902-.012h102.769l.913.013a12.37 12.37 0 011.858.162 5.933 5.933 0 011.671.548 5.589 5.589 0 012.415 2.42 5.74 5.74 0 01.535 1.65c.104.623.162 1.254.174 1.886.003.284.003.588.003.89.008.375.008.732.008 1.092v20.929c0 .363 0 .718-.008 1.075 0 .325 0 .623-.004.93-.011.62-.069 1.24-.171 1.853a5.715 5.715 0 01-.54 1.67c-.263.513-.606.98-1.015 1.386-.409.414-.881.759-1.4 1.022a5.852 5.852 0 01-1.668.55c-.618.101-1.243.156-1.869.163-.293.007-.599.011-.897.011l-1.084.002-101.69-.002z"
+      fill="#000"/>
+    <path
+      d="M24.769 20.3a4.948 4.948 0 012.356-4.151 5.065 5.065 0 00-3.99-2.158c-1.68-.176-3.308 1.005-4.164 1.005-.872 0-2.19-.988-3.608-.958a5.315 5.315 0 00-4.473 2.727c-1.934 3.349-.492 8.27 1.361 10.977.927 1.325 2.01 2.805 3.428 2.753 1.387-.058 1.905-.885 3.58-.885 1.658 0 2.144.885 3.59.852 1.489-.025 2.426-1.332 3.32-2.67a10.96 10.96 0 001.52-3.092 4.782 4.782 0 01-2.92-4.4zM22.037 12.211a4.872 4.872 0 001.115-3.49 4.957 4.957 0 00-3.208 1.66 4.634 4.634 0 00-1.143 3.36 4.099 4.099 0 003.236-1.53zM42.302 27.14H37.57l-1.137 3.356h-2.005l4.484-12.418h2.083l4.483 12.418h-2.039l-1.136-3.356zm-4.243-1.55h3.752l-1.85-5.446h-.051l-1.85 5.447zM55.16 25.97c0 2.813-1.506 4.62-3.779 4.62a3.07 3.07 0 01-2.848-1.583h-.043v4.484H46.63V21.442h1.8v1.506h.033a3.212 3.212 0 012.883-1.6c2.298 0 3.813 1.816 3.813 4.622zm-1.91 0c0-1.833-.948-3.038-2.393-3.038-1.42 0-2.375 1.23-2.375 3.038 0 1.824.955 3.046 2.375 3.046 1.445 0 2.392-1.197 2.392-3.046zM65.124 25.97c0 2.813-1.505 4.62-3.778 4.62a3.07 3.07 0 01-2.848-1.583h-.043v4.484h-1.859V21.442h1.799v1.506h.034a3.212 3.212 0 012.883-1.6c2.298 0 3.813 1.816 3.813 4.622zm-1.91 0c0-1.833-.947-3.038-2.392-3.038-1.42 0-2.375 1.23-2.375 3.038 0 1.824.955 3.046 2.375 3.046 1.445 0 2.392-1.197 2.392-3.046zM71.71 27.036c.138 1.232 1.334 2.04 2.97 2.04 1.566 0 2.693-.808 2.693-1.919 0-.964-.68-1.54-2.29-1.936l-1.609-.388c-2.28-.55-3.339-1.617-3.339-3.348 0-2.142 1.867-3.614 4.519-3.614 2.624 0 4.423 1.472 4.483 3.614h-1.876c-.112-1.239-1.136-1.987-2.634-1.987-1.497 0-2.521.757-2.521 1.858 0 .878.654 1.395 2.255 1.79l1.368.336c2.548.603 3.606 1.626 3.606 3.443 0 2.323-1.85 3.778-4.793 3.778-2.754 0-4.614-1.42-4.734-3.667h1.902zM83.346 19.3v2.142h1.722v1.472h-1.722v4.991c0 .776.345 1.137 1.102 1.137.204-.004.408-.018.611-.043v1.463c-.34.064-.686.092-1.032.086-1.833 0-2.548-.689-2.548-2.444v-5.19h-1.316v-1.472h1.316V19.3h1.867zM86.065 25.97c0-2.849 1.678-4.639 4.294-4.639 2.625 0 4.295 1.79 4.295 4.639 0 2.856-1.661 4.639-4.295 4.639-2.633 0-4.294-1.783-4.294-4.64zm6.695 0c0-1.954-.895-3.108-2.401-3.108-1.506 0-2.4 1.163-2.4 3.108 0 1.962.894 3.106 2.4 3.106 1.506 0 2.401-1.144 2.401-3.106zM96.186 21.442h1.772v1.541h.043a2.16 2.16 0 012.178-1.635c.214-.001.428.022.637.07v1.737a2.594 2.594 0 00-.835-.112 1.872 1.872 0 00-1.937 2.083v5.37h-1.858v-9.053zM109.384 27.837c-.25 1.643-1.85 2.771-3.898 2.771-2.634 0-4.269-1.764-4.269-4.595 0-2.84 1.644-4.682 4.191-4.682 2.505 0 4.08 1.72 4.08 4.466v.637h-6.395v.112a2.353 2.353 0 00.639 1.832 2.363 2.363 0 001.797.732 2.046 2.046 0 002.091-1.273h1.764zm-6.282-2.702h4.526a2.166 2.166 0 00-.608-1.634 2.168 2.168 0 00-1.612-.664 2.293 2.293 0 00-2.306 2.298zM37.826 8.731a2.64 2.64 0 012.808 2.965c0 1.906-1.03 3.002-2.808 3.002h-2.155V8.73h2.155zm-1.228 5.123h1.125a1.876 1.876 0 001.968-2.146 1.882 1.882 0 00-1.968-2.134h-1.125v4.28zM41.68 12.444a2.133 2.133 0 114.248 0 2.134 2.134 0 11-4.247 0zm3.334 0c0-.976-.439-1.546-1.208-1.546-.773 0-1.207.57-1.207 1.546 0 .984.434 1.55 1.207 1.55.77 0 1.208-.57 1.208-1.55zM51.573 14.698h-.922l-.93-3.316h-.07l-.927 3.316h-.913l-1.242-4.503h.902l.806 3.436h.067l.925-3.436h.853l.926 3.436h.07l.803-3.436h.889l-1.237 4.503zM53.853 10.195h.856v.715h.066a1.349 1.349 0 011.344-.802 1.466 1.466 0 011.559 1.675v2.915h-.889v-2.692c0-.724-.314-1.084-.972-1.084a1.034 1.034 0 00-1.075 1.142v2.634h-.889v-4.503zM59.094 8.437h.888v6.26h-.888v-6.26zM61.218 12.444a2.134 2.134 0 114.247 0 2.133 2.133 0 11-4.247 0zm3.333 0c0-.976-.439-1.546-1.208-1.546-.773 0-1.207.57-1.207 1.546 0 .984.434 1.55 1.207 1.55.77 0 1.208-.57 1.208-1.55zM66.4 13.424c0-.81.604-1.277 1.676-1.344l1.22-.07v-.389c0-.476-.315-.744-.922-.744-.497 0-.84.182-.939.5h-.86c.09-.773.818-1.27 1.84-1.27 1.128 0 1.765.563 1.765 1.514v3.077h-.855v-.633h-.07a1.515 1.515 0 01-1.353.707 1.361 1.361 0 01-1.501-1.348zm2.895-.384v-.377l-1.1.07c-.62.042-.9.253-.9.65 0 .405.351.641.834.641a1.064 1.064 0 001.166-.984zM71.348 12.444c0-1.422.732-2.324 1.87-2.324a1.483 1.483 0 011.38.79h.067V8.437h.888v6.26h-.851v-.71h-.07a1.563 1.563 0 01-1.415.785c-1.145 0-1.869-.901-1.869-2.328zm.918 0c0 .956.45 1.53 1.203 1.53.75 0 1.212-.583 1.212-1.526 0-.938-.468-1.53-1.212-1.53-.748 0-1.203.58-1.203 1.527zM79.23 12.444a2.134 2.134 0 114.247 0 2.134 2.134 0 11-4.247 0zm3.333 0c0-.976-.439-1.546-1.208-1.546-.772 0-1.207.57-1.207 1.546 0 .984.435 1.55 1.207 1.55.77 0 1.208-.57 1.208-1.55zM84.67 10.195h.855v.715h.066a1.348 1.348 0 011.344-.802 1.466 1.466 0 011.559 1.675v2.915h-.889v-2.692c0-.724-.314-1.084-.972-1.084a1.034 1.034 0 00-1.075 1.142v2.634h-.889v-4.503zM93.515 9.074v1.142h.976v.748h-.976v2.315c0 .472.195.679.637.679.113 0 .226-.008.339-.02v.74c-.16.028-.322.043-.484.045-.988 0-1.382-.348-1.382-1.216v-2.543h-.714v-.749h.715V9.074h.89zM95.705 8.437h.88v2.482h.07a1.386 1.386 0 011.374-.807 1.485 1.485 0 011.55 1.679v2.907h-.889V12.01c0-.72-.335-1.084-.963-1.084a1.053 1.053 0 00-1.134 1.142v2.63h-.888v-6.26zM104.761 13.482a1.823 1.823 0 01-1.951 1.303 2.047 2.047 0 01-2.08-2.324 2.083 2.083 0 011.212-2.172 2.08 2.08 0 01.864-.181c1.253 0 2.009.856 2.009 2.27v.31h-3.18v.05a1.191 1.191 0 001.199 1.29 1.08 1.08 0 001.072-.546h.855zm-3.126-1.451h2.275a1.09 1.09 0 00-1.109-1.167 1.151 1.151 0 00-1.166 1.167z"
+      fill="#fff"/>
+  </symbol>
+</svg>
+
+<svg xmlns="http://www.w3.org/2000/svg" class="sprite">
+  <symbol id="support" viewBox="0 0 76 92">
+    <path
+      d="M67.1667 54.3333V71H58.8333V54.3333H67.1667ZM17.1667 54.3333V71H13C10.7083 71 8.83333 69.125 8.83333 66.8333V54.3333H17.1667ZM38 0.166626C17.2917 0.166626 0.5 16.9583 0.5 37.6666V66.8333C0.5 73.75 6.08333 79.3333 13 79.3333H25.5V46H8.83333V37.6666C8.83333 21.5416 21.875 8.49996 38 8.49996C54.125 8.49996 67.1667 21.5416 67.1667 37.6666V46H50.5V79.3333H67.1667V83.5H38V91.8333H63C69.9167 91.8333 75.5 86.25 75.5 79.3333V37.6666C75.5 16.9583 58.7083 0.166626 38 0.166626Z"
+      fill="#3077C6"/>
+  </symbol>
+</svg>
+
+<svg xmlns="http://www.w3.org/2000/svg" class="sprite">
+  <symbol id="chat" viewbox="0 0 84 84">
+    <path
+      d="M54.5 8.66671V37.8334H13.5417L8.66666 42.7084V8.66671H54.5ZM58.6667 0.333374H4.5C2.20833 0.333374 0.333328 2.20837 0.333328 4.50004V62.8334L17 46.1667H58.6667C60.9583 46.1667 62.8333 44.2917 62.8333 42V4.50004C62.8333 2.20837 60.9583 0.333374 58.6667 0.333374ZM79.5 17H71.1667V54.5H17V62.8334C17 65.125 18.875 67 21.1667 67H67L83.6667 83.6667V21.1667C83.6667 18.875 81.7917 17 79.5 17Z"
+      fill="#3077C6"/>
+  </symbol>
+</svg>
+
+<svg xmlns="http://www.w3.org/2000/svg" class="sprite">
+  <symbol id="devices" viewBox="0 0 100 68">
+    <path
+      d="M16.6667 8.99996H91.6667V0.666626H16.6667C12.0833 0.666626 8.33333 4.41663 8.33333 8.99996V54.8333H0V67.3333H58.3333V54.8333H16.6667V8.99996ZM95.8333 17.3333H70.8333C68.5417 17.3333 66.6667 19.2083 66.6667 21.5V63.1666C66.6667 65.4583 68.5417 67.3333 70.8333 67.3333H95.8333C98.125 67.3333 100 65.4583 100 63.1666V21.5C100 19.2083 98.125 17.3333 95.8333 17.3333ZM91.6667 54.8333H75V25.6666H91.6667V54.8333Z"
+      fill="#3077C6"/>
+  </symbol>
+</svg>
+
+<svg xmlns="http://www.w3.org/2000/svg" class="sprite">
+  <symbol id="like" viewBox="0 0 92 84">
+    <path
+      d="M83.5 29.3333H57.2083L61.1667 10.2916L61.2917 8.95829C61.2917 7.24996 60.5833 5.66663 59.4583 4.54163L55.0417 0.166626L27.625 27.625C26.0833 29.125 25.1667 31.2083 25.1667 33.5V75.1666C25.1667 79.75 28.9167 83.5 33.5 83.5H71C74.4583 83.5 77.4167 81.4166 78.6667 78.4166L91.25 49.0416C91.625 48.0833 91.8333 47.0833 91.8333 46V37.6666C91.8333 33.0833 88.0833 29.3333 83.5 29.3333ZM83.5 46L71 75.1666H33.5V33.5L51.5833 15.4166L46.9583 37.6666H83.5V46ZM0.166656 33.5H16.8333V83.5H0.166656V33.5Z"
+      fill="#3077C6"/>
+  </symbol>
+</svg>
+
+<svg xmlns="http://www.w3.org/2000/svg" class="sprite">
+  <symbol id="arrow" viewBox="0 0 9 21">
+    <path d="M.941 19.823L7.1 11.612a2 2 0 000-2.4L.941 1" stroke="#383838" stroke-width="2"/>
+  </symbol>
+</svg>
+
+<svg xmlns="http://www.w3.org/2000/svg" class="sprite">
+  <symbol id="cross" viewBox="0 0 26 26">
+    <path
+      d="M26 1.486L24.514 0 13 11.514 1.486 0 0 1.486 11.514 13 0 24.514 1.486 26 13 14.486 24.514 26 26 24.514 14.486 13 26 1.486z"
+      fill="#BFBFBF"/>
+  </symbol>
+</svg>
+
+<svg xmlins="http://www.w3.org/2000/svg" class="sprite">
+  <symbol id="user" viewBox="0 0 86 86">
+    <circle cx="43" cy="43" r="43" fill="#fff"/>
+    <path
+      d="M46.652 55.748c0-2.056.511-4.03 1.473-5.79a54.137 54.137 0 00-2.782-1.472.362.362 0 01-.205-.338v-8.08a3.776 3.776 0 001.688-3.141v-8.378A7.55 7.55 0 0039.276 21h-1.8a7.55 7.55 0 00-7.549 7.55v8.377c0 1.31.675 2.465 1.688 3.14v8.081a.38.38 0 01-.205.338c-1.155.562-6.75 3.386-11.937 7.651A4.04 4.04 0 0018 59.277v5.739h32.979a10.52 10.52 0 01-.788-.726 12.01 12.01 0 01-3.54-8.542z"
+      fill="#3077C6"/>
+    <path
+      d="M58.732 46.48c-5.114 0-9.267 4.154-9.267 9.268 0 5.115 4.153 9.268 9.267 9.268 5.115 0 9.268-4.153 9.268-9.268a9.266 9.266 0 00-9.268-9.267zM64.154 57.1h-4.071v4.07h-2.7V57.1H53.31v-2.701h4.071v-4.071h2.7v4.071h4.072v2.7z"
+      fill="#3077C6"/>
+  </symbol>
+</svg>
+
+
+<header class="header">
+  <div class="container container__">
+    <nav class="nav">
+      <svg class="nav__logo">
+        <use href="#tripHouse"></use>
+      </svg>
+      <div class="nav__item_stays"><span class="text_l">  Stays </span>
+
+      </div>
+      <div class="nav__item_attraction"><span class="text_l"> Attractions </span>
+      </div>
+      <svg class="svg__style_white nav__icon_night">
+        <use href="#Night"></use>
+      </svg>
+      <svg class="svg__style_white">
+        <use href="#Account"></use>
+      </svg>
+    </nav>
+
+    <h1 class="h1">Discover stays <br> to live, work or just relax</h1>
+
+    <form class="form">
+      <div class="form_row">
+        <div class="form__placeholder text_m">Your destination or hotel name</div>
+        <div class="form__placeholder text_m">Check-in — Check-out</div>
+      </div>
+      <div class="form_row form_row__bg">
+        <select class="select_city text_m padding_left">
+          <option selected value="New York">New York</option>
+          <option value="Tokyo">Tokyo</option>
+          <option value="London">London</option>
+          <option value="Paris">Paris</option>
+        </select>
+
+        <button class="button button_calendar text_m">
+          Tue 15 Sept — Sat 19 Sept
+        </button>
+
+        <select class="select_room text_m padding_left">
+          <option selected> 2 Adults — 0 Children — 1 Room</option>
+        </select>
+
+        <button class="button button_search text_l ">Search</button>
+      </div>
+    </form>
+
+    <div class="header__svg_row">
+      <svg>
+        <use href="#GooglePlayBadge"></use>
+      </svg>
+      <svg>
+        <use href="#AppleBadge"></use>
+      </svg>
+    </div>
+  </div>
+</header>
+
+
+<section class="section">
+  <div class="container">
+    <h2 class="h2 text_center"> What do you offer </h2>
+    <div class="row row_column">
+      <div class="col-3 col-3__svg col-xs-6 text_center">
+        <svg class="svg">
+          <use href="#support"/>
+        </svg>
+        <p class="span__svg">Support 24/7</p>
+      </div>
+      <div class="col-3 col-3__svg col-xs-6 text_center">
+        <svg class="svg">
+          <use href="#chat"/>
+        </svg>
+        <p class="span__svg">Communicate directly</p>
+      </div>
+      <div class="col-3 col-3__svg col-xs-6 text_center">
+        <svg class="svg">
+6         <use href="#devices"/>
+        </svg>
+        <p class="span__svg">Book online</p>
+      </div>
+      <div class="col-3 col-3__svg col-3__svg_last col-xs-6 text_center">
+        <svg class="svg">
+          <use href="#like"/>g        </svg>
+        <p class="span__svg">Real guest reviews</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="section section_bg">
+  <div class="container">
+    <h2 class="h2 text_center"> Homes guests loves </h2>
+    <div class="row">
+      <div class="col-3 col-3_one col-xs-3">
+        <div class="image image_first">
+          <img class=image__size_156 src="./image/Hotel Leopold.png" alt="Hotel Leopold">
+        </div>
+        <div class="text_primary text_l text__box">
+          Hotel Leopold
+        </div>
+        <div class="text_secondary text_l text__box">
+          Saint Petersburg, Russia
+        </div>
+      </div>
+      <div class="col-3 col-3_two col-xs-3">
+        <div class="image">
+          <img class=image__size_156 src="./image/Apartment Sunshine.png" alt="Apartment Sunshine">
+        </div>
+        <div class="text_primary text_l text__box">
+          Apartment Sunshine
+        </div>
+        <div class="text_secondary text_l text__box">
+          Santa Cruz de Tenerife, Spain
+        </div>
+      </div>
+      <div class="col-3 col-3_three col-xs-3">
+        <div class="image">
+          <img class=image__size_156 src="./image/Villa Kunerad.png" alt="Villa Kunerad">
+        </div>
+        <div class="text_primary text_l text__box">
+          Villa Kunerad
+        </div>
+        <div class="text_secondary text_l text__box">
+          Vysokie Tatry, Slowakia
+        </div>
+      </div>
+      <div class="col-3 col-3_four col-xs-3">
+        <div class="image image_last">
+          <img class=image__size_156 src="./image/Hostel Friendship.png" alt="Hostel Friendship">
+        </div>
+        <div class="text_primary text_l text__box">
+          Hostel Friendship
+        </div>
+        <div class="text_secondary text_l text__box">
+          Berlin, Germany
+        </div>
+      </div>
+      <div class="carousel__button_next">
+        <div class="svg__style_white svg__style_white_mobile carousel__button">
+          <svg class="arrow">
+            <use href="#arrow"></use>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container">
+    <h2 class="h2 text_center"> The best destinations </h2>
+    <div class="button__row">
+      <button class="button text_l button_stroke">Regions</button>
+      <button class="button text_l button_stroke">Cities</button>
+      <button class="button text_l button_stroke display_none_mobile">Places of interest</button>
+      <button class="button text_l button_stroke display_none_desktop">Places</button>
+
+    </div>
+
+
+    <div class="row">
+      <div class="col-3 col-3_one col-xs-3">
+
+        <div class="col-3__hover">
+
+          <div class="col-3_back">
+            <div class="image">
+              <img class=image__size_156 src="./image/Maldives.jpg" alt="Maldives">
+            </div>
+          </div>
+
+          <div class="col-3_front">
+            <div class="image_back">
+              <button class="button button_back text_primary text_m"> Book now</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="text_primary text_l text__box text__box_absolute">
+          Maldives
+        </div>
+      </div>
+
+      <div class="col-3 col-xs-3 col-3_two">
+
+        <div class="col-3__hover">
+
+          <div class="col-3_back">
+            <div class="image">
+              <img class=image__size_156 src="./image/Spain.jpg" alt="Spain">
+            </div>
+          </div>
+
+          <div class="col-3_front">
+            <div class="image_back">
+              <button class="button button_back text_primary text_m"> Book now</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="text_primary text_l text__box text__box_absolute">
+          Spain
+        </div>
+      </div>
+
+
+      <div class="col-3 col-xs-3 col-3_three">
+
+        <div class="col-3__hover">
+
+          <div class="col-3_back">
+            <div class="image">
+              <img class=image__size_156 src="./image/Norway.jpg" alt="Norway">
+            </div>
+          </div>
+
+          <div class="col-3_front">
+            <div class="image_back">
+              <button class="button button_back text_primary text_m"> Book now</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="text_primary text_l text__box text__box_absolute">
+          Norway
+        </div>
+      </div>
+
+
+      <div class="col-3 col-xs-3 col-3_four">
+
+        <div class="col-3__hover">
+
+          <div class="col-3_back">
+            <div class="image">
+              <img class=image__size_156 src="./image/Island.jpg" alt="Island">
+            </div>
+          </div>
+
+          <div class="col-3_front">
+            <div class="image_back">
+              <button class="button button_back text_primary text_m"> Book now</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="text_primary text_l text__box text__box_absolute">
+          Island
+        </div>
+      </div>
+
+
+      <div class="carousel__button_next carousel__button_next_hidden">
+        <div class="svg__style_white svg__style_white_mobile carousel__button">
+          <svg class="arrow">
+            <use href="#arrow"></use>
+          </svg>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="carousel__button carousel__button_down svg__style_white">
+
+      <svg class="arrow arrow__down">
+        <use href="#arrow"></use>
+      </svg>
+
+    </div>
+
+  </div>
+</section>
+
+
+<section class="container section__container section__container_desktop">
+  <div class="container_s block_bg">
+    <div class="flex_end">
+      <svg class="cross">
+        <use href="#cross"></use>
+      </svg>
+    </div>
+
+    <div class="flex_center">
+      <svg class="user">
+        <use href="#user"></use>
+      </svg>
+      <div class="padding_left flex_column">
+        <div class="text_l text_l_bold"> Sign up and get 20% off your first booking</div>
+        <button class="button button_back text_primary text_m"> Sign up</button>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="section block_bg_mobile">
+  <div class="container">
+    <h2 class="h2 text_center"> Guests reviews </h2>
+
+
+    <div class="row">
+
+      <div class="row__col-4 col-xs-6 col-4_one">
+        <div class="col-4">
+
+          <div class="col-4_front">
+            <div class="image">
+              <img src="./image/bali.jpg" alt="Ubud Bali Resort&SPA">
+            </div>
+          </div>
+
+          <div class="col-4_back">
+            <div class="row_back">
+              <p class="text_m">From 250 USD</p>
+            </div>
+          </div>
+        </div>
+        <div class="block_bg">
+
+          <div>
+            <div class="flex_between">
+              <div class="text_primary text_m text-500">Ubud Bali Resort&SPA</div>
+              <button class="button score">9.4</button>
+            </div>
+            <div class="flex_between padding-7">
+              <div class="text_primary text_m">Bali, Indonesia</div>
+              <div class="review">1324 reviews</div>
+            </div>
+          </div>
+
+          <div class="flex_center">
+            <svg class="account">
+              <use href="#Account"></use>
+            </svg>
+            <div class="padding_left flex_column">
+              <div class="text_m">Hanna Ivanova</div>
+              <div class="text_m flag">
+                <img src="./icons/ua.png" alt="flag-ua"/>
+                Ukraine
+              </div>
+            </div>
+
+          </div>
+
+          <div class="text_m">
+            <p>Great location, really pleasant and clean rooms, but the thing that makes this such a good place to stay
+              are the staff. All of the people are incredibly helpful and generous with their time and advice.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row__col-4 col-4_two">
+        <div class="col-4">
+
+          <div class="col-4_front">
+            <div class="image">
+              <img src="./image/KingKong.jpg" alt="King Kong Hostel">
+            </div>
+          </div>
+
+          <div class="col-4_back">
+            <div class="row_back">
+              <p class="text_m">From 40 USD</p>
+            </div>
+          </div>
+        </div>
+        <div class="block_bg">
+
+          <div>
+            <div class="flex_between">
+              <div class="text_primary text_m text-500">King Kong Hostel</div>
+              <button class="button score">8.9</button>
+            </div>
+            <div class="flex_between padding-7">
+              <div class="text_primary text_m">Rotterdam, Netherlands</div>
+              <div class="review">2016 reviews</div>
+            </div>
+          </div>
+
+          <div class="flex_center">
+            <svg class="account">
+              <use href="#Account"></use>
+            </svg>
+            <div class="padding_left flex_column">
+              <div class="text_m">Adam Smith</div>
+              <div class="text_m flag">
+                <img src="./icons/usa.png" alt="flag-usa"/>
+                USA
+              </div>
+            </div>
+
+          </div>
+
+          <div class="text_m">
+            <p>I've been in this hostel for a month and here is the best hostel of all
+              Excellent management of excellent and ethical staff and bedrooms Bathrooms are always clean and excellent
+              Most importantly, those who work here are kind and good-natured.</p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="row__col-4 col-4_three">
+        <div class="col-4">
+
+          <div class="col-4_front">
+            <div class="image">
+              <img src="./image/rokoko.jpg" alt="Rokoko Hotel">
+            </div>
+          </div>
+
+          <div class="col-4_back">
+            <div class="row_back">
+              <p class="text_m">From 100 USD</p>
+            </div>
+          </div>
+        </div>
+        <div class="block_bg">
+
+          <div>
+            <div class="flex_between">
+              <div class="text_primary text_m text-500">Rokoko Hotel</div>
+              <button class="button score">9.1</button>
+            </div>
+            <div class="flex_between padding-7">
+              <div class="text_primary text_m">Ourika, Marocco</div>
+              <div class="review">815 reviews</div>
+            </div>
+          </div>
+
+          <div class="flex_center">
+            <svg class="account">
+              <use href="#Account"></use>
+            </svg>
+            <div class="padding_left flex_column">
+              <div class="text_m">Anika Messer</div>
+              <div class="text_m flag">
+                <img src="./icons/de.png" alt="flag-de"/>
+                Germany
+              </div>
+            </div>
+
+          </div>
+
+          <div class="text_m">
+            <p>Efficient, friendly, professional, and appropriately attentive. Great hotel in a great location.
+              Easy access to all the surrounding historical sites. Staff is fantastic. Will definitely stay
+              at this location during my next stay in Marocco.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<div class="row_circle">
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+</div>
+
+  </div>
+</section>
+
+
+<section class="section__container_mobile">
+
+      <svg class="cross">
+        <use href="#cross"></use>
+      </svg>
+
+
+    <div class="square">
+      <svg class="triphouse">
+        <use href="#tripHouse"></use>
+      </svg>
+    </div>
+
+
+     <div class="text_l text_l_bold">
+       Sign up and get 20% off your first booking
+            </div>
+  <div class="text-500 text_sm">
+    Install
+  </div>
+
+
+</section>
+
+
+
+
+<footer class="footer">
+  <div class="container">
+    <h2 class="h2 title__footer text_center">
+      <svg class="title__footer_svg">
+        <use href="#tripHouse"/>
+      </svg>
+    </h2>
+    <div class="row">
+      <ul class="col-4">
+        <li class="li th">About</li>
+        <li class="li">How Triphouse works</li>
+        <li class="li">Careers</li>
+        <li class="li">Privacy</li>
+        <li class="li">Terms</li>
+      </ul>
+
+      <ul class="col-4">
+        <li class="li th">Property types</li>
+        <li class="li">Guest houses</li>
+        <li class="li">Hotels</li>
+        <li class="li">Apartments</li>
+        <li class="li">Villas</li>
+        <li class="li">Holiday homes</li>
+        <li class="li">Hostels</li>
+      </ul>
+
+      <ul class="col-4">
+        <li class="li th">Support</li>
+        <li class="li">Contact Customer Service</li>
+        <li class="li">FAQ</li>
+      </ul>
+    </div>
+      <div class="text_s">
+        &copy; 2020 Triphouse, Inc. All rights reserved
+      </div>
+
+  </div>
+
+</footer>
+
+
+</body>
+</html>

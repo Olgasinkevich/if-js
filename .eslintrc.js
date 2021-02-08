@@ -13,6 +13,6 @@ module.exports = {
   },
   rules: {
     'no-plusplus': 0,
-    'line-break-style': 0
+    'linebreak-style': 0
   }
 };
