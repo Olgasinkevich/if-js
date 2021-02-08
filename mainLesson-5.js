@@ -53,22 +53,21 @@ const data = [
   },
 ];
 
-const query = prompt('Введите текст для поиска');
-
 const search = (string, array) => {
   const re = new RegExp(string, 'i');
   const arrTrue = array.filter((item) => (
-    Object.values(item).some((e) => re.test(e))
+    Object.values(item)
+      .some((e) => re.test(e))
   ));
   arrTrue.forEach((item) => {
     document.write(
       `Country: ${item.country} City: ${item.city} Hotel: ${item.hotel}`, '<br/>',
     );
   });
-  /*  return arrTrue.reduce((acc, item)=>{
-     return acc + 'country: ' + item.country + ' city: ' + item.city + ' hotel: ' + item.hotel;
-    }, '') */
 };
 
-/* console.log (search(string, data)); */
-search(query, data);
+const input = document.getElementById('input');
+const button = document.getElementById('button');
+button.addEventListener('click', () => {
+  search(input.value, data);
+});
