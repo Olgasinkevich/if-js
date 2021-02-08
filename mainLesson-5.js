@@ -53,11 +53,13 @@ const data = [
   },
 ];
 
-const string = prompt('Введите текст для поиска');
+const query = prompt('Введите текст для поиска');
+
 const search = (string, array) => {
-  const strLow = string.toLowerCase();
+  const re = new RegExp(string, 'i');
   const arrTrue = array.filter((item) => (
-    Object.values(item).some((e) => e.toLowerCase().includes(strLow))));
+    Object.values(item).some((e) => re.test(e))
+  ));
   arrTrue.forEach((item) => {
     document.write(
       `Country: ${item.country} City: ${item.city} Hotel: ${item.hotel}`, '<br/>',
@@ -69,4 +71,4 @@ const search = (string, array) => {
 };
 
 /* console.log (search(string, data)); */
-search(string, data);
+search(query, data);
