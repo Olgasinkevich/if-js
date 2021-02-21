@@ -13,21 +13,21 @@ function sum(a) {
 sum(5)(2)(3);
 
 // для любого количества абзацев
-const callback = (element) => {
+const callback = () => {
   const colors = ['magenta', 'cyan', 'firebrick', 'springgreen', 'skyblue'];
   let counter = 0;
-  return () => {
+  return (event) => {
     if (counter && counter >= colors.length) {
       counter = 0;
     }
     // eslint-disable-next-line no-param-reassign
-    element.style.color = colors[counter];
+    event.target.style.color = colors[counter];
     counter++;
   };
 };
 const colorArrayByClick = (arr) => {
   arr.forEach((item) => {
-    item.addEventListener('click', callback(item));
+    item.addEventListener('click', callback());
   });
 };
 const querySelectorAll = document.querySelectorAll('.text');
