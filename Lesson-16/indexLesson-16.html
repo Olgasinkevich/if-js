@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+<header class="header">
+    <div class="container container__">
+        <nav class="nav">
+            <svg class="nav__logo">
+                <use href="#tripHouse"></use>
+            </svg>
+            <div class="nav__item_stays"><span class="text_l">  Stays </span>
+
+            </div>
+            <div class="nav__item_attraction"><span class="text_l"> Attractions </span>
+            </div>
+            <svg class="svg__style_white nav__icon_night">
+                <use href="#Night"></use>
+            </svg>
+            <svg class="svg__style_white">
+                <use href="#Account"></use>
+            </svg>
+        </nav>
+
+        <h1 class="h1">Discover stays <br> to live, work or just relax</h1>
+
+        <form class="form" id="form">
+            <div class="form_row">
+                <div class="form__placeholder text_m">Your destination or hotel name</div>
+                <div class="form__placeholder text_m">Check-in — Check-out</div>
+            </div>
+            <div class="form_row form_row__bg">
+<input type="text" name="search">
+                <!--
+                <select class="select_city text_m padding_left">
+                    <option selected value="New York">New York</option>
+                    <option value="Tokyo">Tokyo</option>
+                    <option value="London">London</option>
+                    <option value="Paris">Paris</option>
+                </select>
+-->
+                <button class="button button_calendar text_m">
+                    Tue 15 Sept — Sat 19 Sept
+                </button>
+
+                <select class="select_room text_m padding_left">
+                    <option selected> 2 Adults — 0 Children — 1 Room</option>
+                </select>
+
+                <button class="button button_search text_l ">Search</button>
+            </div>
+        </form>
+
+        <div class="header__svg_row">
+            <svg>
+                <use href="#GooglePlayBadge"></use>
+            </svg>
+            <svg>
+                <use href="#AppleBadge"></use>
+            </svg>
+        </div>
+    </div>
+</header>
+
+
+<script src="mainLesson-16.js"></script>
+</body>
+</html>
