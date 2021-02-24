@@ -4,8 +4,7 @@ const formEl = document.getElementById('form');
 
 formEl.addEventListener('submit',
   async (event) => {
-    console.log((new FormData(formEl)).get('file'));
-    event.preventDefault();
+       event.preventDefault();
   /*
     const fetchOptions = {
       method: 'POST',
@@ -36,16 +35,17 @@ formEl.addEventListener('submit',
         })
         .catch((error) => alert(error.message));
     }
+    //отсортировать по поиску
 
-    const dataSort = arr.map;
 
     //3
+    const searchEl = document.getElementById('search')
 const render = (array) => createResultArray(array)
   .forEach((item) => {
     const el = document.createElement('div');
-    el.classList.add('hotel', 'col-3', 'col-3_one', 'col-xs-3');
+        el.classList.add('row', 'hotel', 'col-3', 'col-3_one', 'col-xs-3');
     el.innerHTML = `
-    <div class="col-3 col-3_one col-xs-3">
+    <div class="col-3 col-xs-3">
   <div class="image image_first">
     <img class=image__size_156 src="${item.imageUrl}" alt="${item.name}">
   </div>
@@ -57,7 +57,7 @@ const render = (array) => createResultArray(array)
   </div>
 </div>
 `;
-    hotelsEl.appendChild(el);// добавл полученные элементы в див с id
+    searchEl.appendChild(el);// добавл полученные элементы в див с id
   });
 
 
@@ -154,4 +154,3 @@ const search = (str, arr) => {
 
 /* console.log (search(string, data)); */
 search(string, data);
-
