@@ -1,50 +1,36 @@
-//1
-const PATH = 'https://fe-student-api.herokuapp.com/api/file';
+// 1
+const PATH = 'https://fe-student-api.herokuapp.com/api/hotels';
 const formEl = document.getElementById('form');
 
-formEl.addEventListener('submit',
-  async (event) => {
-       event.preventDefault();
-  /*
-    const fetchOptions = {
-      method: 'POST',
-      body: new FormData(formEl),
-      type: 'multipart/form-data',
-    };
-    await fetch(PATH, fetchOptions)
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error(response.statusText);
-        }
-        return response.json();
-      })
-      .then((result) => console.log(result))
-      .catch((error) => console.log(error.message));
-  });
-*/
-//2
-    const hotels = sessionStorage.getItem('hotels');// получ или исп полученные ранее данные
-    if (hotels) {
-      render(JSON.parse(hotels));
-    } else {
-      fetch(PATH)
-        .then((response) => response.json())
-        .then((data) => {
-          sessionStorage.setItem('hotels', JSON.stringify(data));
-          render(data);
-        })
-        .catch((error) => alert(error.message));
-    }
-    //отсортировать по поиску
+const search = (string, array) => {
+  const re = new RegExp(string, 'i');
+  const arrTrue = array.filter((item) => (
+    Object.values(item)
+      .some((e) => re.test(e))
+  ));
+  return arrTrue;
+};
 
+const createContainer = () => {
+  if (!document.getElementById('search')) {
+    const container = `
+    <section class="section section_bg"
+      <div class="container" id="search">
+        <h2 class="h2 text_center"> Available hotels </h2>
+      </div>
+    </section>
+`;
+    document.querySelector('header')
+      .insertAdjacentHTML('afterend', container);
+  }
+};
 
-    //3
-    const searchEl = document.getElementById('search')
-const render = (array) => createResultArray(array)
-  .forEach((item) => {
-    const el = document.createElement('div');
-        el.classList.add('row', 'hotel', 'col-3', 'col-3_one', 'col-xs-3');
-    el.innerHTML = `
+const render = (string, array) => {
+  search(string, array)
+    .forEach((item) => {
+      const el = document.createElement('div');
+      el.classList.add('row', 'hotel', 'col-3', 'col-3_one', 'col-xs-3');
+      el.innerHTML = `
     <div class="col-3 col-xs-3">
   <div class="image image_first">
     <img class=image__size_156 src="${item.imageUrl}" alt="${item.name}">
@@ -57,100 +43,47 @@ const render = (array) => createResultArray(array)
   </div>
 </div>
 `;
-    searchEl.appendChild(el);// добавл полученные элементы в див с id
-  });
-
-
-
-
-
-
-//15
-const IMAGES_PER_SCREEN = 4;
-const PATH = 'https://fe-student-api.herokuapp.com/api/hotels/popular';
-const hotelsEl = document.getElementById('hotels'); // записала элемент с указ id
-const random = (maxIndex) => Math.floor(Math.random() * maxIndex);// функ кот получ рандомн знач
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Lesson-5
-//seach hotels
-
-const data = [
-  {
-    country: 'Russia',
-    city: 'Saint Petersburg',
-    hotel: 'Hotel Leopold',
-  },
-  {
-    country: 'Spain',
-    city: 'Santa Cruz de Tenerife',
-    hotel: 'Apartment Sunshine',
-  },
-  {
-    country: 'Slowakia',
-    city: 'Vysokie Tatry',
-    hotel: 'Villa Kunerad',
-  },
-  {
-    country: 'Germany',
-    city: 'Berlin',
-    hotel: 'Hostel Friendship',
-  },
-  {
-    country: 'Indonesia',
-    city: 'Bali',
-    hotel: 'Ubud Bali Resort&SPA',
-  },
-  {
-    country: 'Netherlands',
-    city: 'Rotterdam',
-    hotel: 'King Kong Hostel',
-  },
-  {
-    country: 'Marocco',
-    city: 'Ourika',
-    hotel: 'Rokoko Hotel',
-  },
-  {
-    country: 'Germany',
-    city: 'Berlin',
-    hotel: 'Hotel Rehberge Berlin Mitte',
-  },
-];
-
-const string = prompt('Введите текст для поиска');
-//3
-const search = (str, arr) => {
-  const strLow = str.toLowerCase();
-  const arrTrue = arr.filter((item) => (
-    item.country.toLowerCase()
-      .includes(strLow)
-    || item.city.toLowerCase()
-      .includes(strLow)
-    || item.hotel.toLowerCase()
-      .includes(strLow)));
-  arrTrue.forEach((item) => {
-    document.write(
-      `Country: ${item.country} City: ${item.city} Hotel: ${item.hotel}`, '<br/>',
-    );
-  });
-  /*  return arrTrue.reduce((acc, item)=>{
-     return acc + 'country: ' + item.country + ' city: ' + item.city + ' hotel: ' + item.hotel;
-    }, '') */
+      const searchEl = document.getElementById('search');
+      searchEl.innerHTML = '';
+      searchEl.appendChild(el);// добавл полученные элементы в див с id
+    });
 };
 
-/* console.log (search(string, data)); */
-search(string, data);
+formEl.addEventListener('submit',
+  async (event) => {
+    event.preventDefault();
+
+    const searchQuery = new FormData(formEl).get('search');
+
+    const hotels = sessionStorage.getItem('hotels');// получ или исп полученные ранее данные
+    if (hotels) {
+      createContainer();
+      render(searchQuery, JSON.parse(hotels));
+    } else {
+      fetch(PATH)
+        .then((response) => response.json())
+        .then((data) => {
+          sessionStorage.setItem('hotels', JSON.stringify(data));
+          createContainer();
+          render(searchQuery, data);
+        })
+        .catch((error) => alert(error.message));
+    }
+  });
+
+// отсортировать по поиску
+
+/* const search = (str, arr) => {
+      const strLow = str.toLowerCase();
+      const arrTrue = arr.filter((item) => (
+        item.country.toLowerCase()
+          .includes(strLow)
+        || item.city.toLowerCase()
+          .includes(strLow)
+        || item.hotel.toLowerCase()
+          .includes(strLow)));
+      arrTrue.forEach((item) => {
+        document.write(
+          `Country: ${item.country} City: ${item.city} Hotel: ${item.hotel}`, '<br/>',
+        );
+      }); */
